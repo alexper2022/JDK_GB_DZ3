@@ -14,31 +14,25 @@ package org.example;
    пары, а также переопределение метода toString(), возвращающее строковое представление пары.
 */
 
-import java.text.DecimalFormat;
 import java.util.AbstractList;
 
 public class Calculator {
 
-    private static final DecimalFormat formatD = new DecimalFormat("#0.00");
 
-    public static <T1 extends Number, T2 extends Number> void multiply(T1 t1, T2 t2) {
-        System.out.println(t1 + " * " + t2 + " = " +
-                formatD.format(t1.doubleValue() * t2.doubleValue()));
+    public static <T1 extends Number, T2 extends Number> double multiply(T1 t1, T2 t2) {
+        return t1.doubleValue() * t2.doubleValue();
     }
 
-    public static <T1 extends Number, T2 extends Number> void divide(T1 t1, T2 t2) {
-        System.out.println(t1 + " / " + t2 + " = " +
-                formatD.format(t1.doubleValue() / t2.doubleValue()));
+    public static <T1 extends Number, T2 extends Number> double divide(T1 t1, T2 t2) {
+        return t1.doubleValue() / t2.doubleValue();
     }
 
-    public static <T1 extends Number, T2 extends Number> void subtract(T1 t1, T2 t2) {
-        System.out.println(t1 + " - " + t2 + " = " +
-                formatD.format(t1.doubleValue() - t2.doubleValue()));
+    public static <T1 extends Number, T2 extends Number> double subtract(T1 t1, T2 t2) {
+        return t1.doubleValue() - t2.doubleValue();
     }
 
-    public static <T1 extends Number, T2 extends Number> void sum(T1 t1, T2 t2) {
-        System.out.println(formatD.format(t1) + " + " + formatD.format(t2) + " = " +
-                formatD.format(t1.doubleValue() + t2.doubleValue()));
+    public static <T1 extends Number, T2 extends Number> double sum(T1 t1, T2 t2) {
+        return t1.doubleValue() + t2.doubleValue();
     }
 
     public static <T1 extends AbstractList> boolean compareArrays(T1 array1, T1 array2) {
@@ -49,7 +43,6 @@ public class Calculator {
                 }
             }
         } else {
-            System.out.println("Размеры массивов не совпадают");
             return false;
         }
         return true;

@@ -1,5 +1,6 @@
 package org.example;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 /*
@@ -18,14 +19,15 @@ import java.util.ArrayList;
 public class App {
     public static void main(String[] args) {
 
+        final DecimalFormat formatD = new DecimalFormat("#0.00");
         System.out.println("1. Написать класс Калькулятор (необобщенный), который содержит обобщенные статические методы:\n" +
                 "sum(), multiply(), divide(), subtract(). Параметры этих методов – два числа разного типа,\n" +
                 "над которыми должна быть произведена операция.");
         System.out.println("---------------------------------------------------------------------------------------------");
-        Calculator.multiply(2.5555d, 2.4f);
-        Calculator.divide(1, 2.4f);
-        Calculator.subtract(1, 2.4f);
-        Calculator.sum(1, 2.4f);
+        System.out.println(formatD.format(Calculator.multiply(2.5555d, 2.4f)));
+        System.out.println(formatD.format(Calculator.divide(1, 2.4f)));
+        System.out.println(formatD.format(Calculator.subtract(1, 2.4f)));
+        System.out.println(formatD.format(Calculator.sum(1, 2.4f)));
         System.out.println("---------------------------------------------------------------------------------------------\n");
 
         System.out.println("2. Напишите обобщенный метод compareArrays(), который принимает два массива и возвращает true,\n" +
