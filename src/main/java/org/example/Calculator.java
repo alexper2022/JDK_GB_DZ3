@@ -38,7 +38,7 @@ public class Calculator {
     public static <T1 extends AbstractList> boolean compareArrays(T1 array1, T1 array2) {
         if (array1.size() == array2.size()) {
             for (int i = 0; i < array1.size(); i++) {
-                if (!array1.get(i).getClass().getName().equals(array2.get(i).getClass().getName()) || !array1.get(i).equals(array2.get(i))) {
+                if (!array1.get(i).getClass().getSimpleName().equals(array2.get(i).getClass().getSimpleName())) {
                     return false;
                 }
             }

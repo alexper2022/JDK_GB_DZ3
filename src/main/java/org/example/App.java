@@ -41,11 +41,11 @@ public class App {
         arrayList1.add('a');
         arrayList1.add(11.5f);
         arrayList1.add(12.12d);
-        arrayList2.add(1);
-        arrayList2.add("111");
-        arrayList2.add('a');
-        arrayList2.add(11.5f);
-        arrayList2.add(12.12d);
+        arrayList2.add(2);
+        arrayList2.add("222");
+        arrayList2.add('b');
+        arrayList2.add(11.9f);
+        arrayList2.add(12.54d);
         System.out.println(arrayList1 + "\n" + arrayList2);
         System.out.println(Calculator.compareArrays(arrayList1, arrayList2));
         System.out.println("---------------------------------------------------------------------------------------------");
